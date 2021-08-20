@@ -1,21 +1,19 @@
-  
-<mat-toolbar color="primary">
-    <div fxHide.gt-xs>
-        <button mat-icon-button (click)="onToggleSidenav()">
-            <mat-icon>menu</mat-icon>
-        </button>
-    </div>
-    <div>
-        <a routerLink="/home">Owner-Account</a>
-    </div>
-    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
-        <ul fxLayout fxLayoutGap="15px" class="navigation-items">
-            <li>
-                <a routerLink="/owner">Owner Actions</a>
-            </li>
-            <li>
-                <a routerLink="/account">Account Actions</a>
-            </li>
-        </ul>
-    </div>
-  </mat-toolbar>
+
+<header>
+    <nav>
+      <a class="logo">Alvacir Junior</a>
+      <div class="mobile-menu">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        
+      </div>
+      <ul class="nav-list">
+        <li><a routerLink="#">Link 1</a></li>
+        <li><a routerLink="#">Link 1</a></li>
+        <li><a routerLink="#">Link 1</a></li>
+        <li><a routerLink="#">Link 1</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main></main>
