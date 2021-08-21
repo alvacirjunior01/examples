@@ -60,7 +60,17 @@ main {
     margin: 8px;
 }
 @media (max-width: 767px) {
-   
+    @keyframes navigator {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        } 
+        to {
+            opacity: 1;
+            transform: translateX(0);
+           
+        }
+    }
     .nav-list {
         position: absolute;
         top: 8vh;
@@ -85,16 +95,6 @@ main {
         transform: translateX(0);
     }
     
-    @keyframes navigator {
-        from {
-            opacity: 0;
-            transform: translateX(50px);
-        } 
-        to {
-            opacity: 1;
-            transform: translateX(0);
-           
-        }
-    }
+  
 
 }

@@ -30,21 +30,22 @@ export class HeaderComponent implements OnInit {
 
 
   addClickEvent(mob:Element, nav:Element,links: NodeListOf<Element>){
-    mob.addEventListener("click", () => nav.classList.toggle(this.activeClass));
-    this.animateLinks(links);
+    mob.addEventListener("click", () => {
+
+      //ativando a classe nav-list, para receber os estilos aplicados para a classe ativa
+       nav.classList.toggle(this.activeClass)
+
+       /*Animação do link esta dentro do evento de click porque o 
+        momento que o evento é acionado é o momento onde quero que os links sejam aanimados */
+       links.forEach((link:any, i) => {
+        link.style.animation?(link.style.animation = ""):(link.style.animation =`navigator 0.5s ease forwards ${i/6 + 0.3}s`);
+        console.log(i/7 + 0.3);
+      } );
+      });
+    
   }
 
-   animateLinks(links: any) {
-     links.forEach((link:HTMLElement, i:number) => {
-       
-       link.style.animation?(link.style.animation = ""):(link.style.animation =`navigator 0.5s ease forwards 0.9s`);
 
-       console.log(i);
-     } )
-
-     
-    
-   }
 
 
   
